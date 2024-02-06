@@ -92,6 +92,16 @@ namespace calc
                 default:
                     break;
             }
+            if(label1.Text == "2137")
+            {
+                Form3 watykanczyk = new Form3();
+                Random random = new Random();
+                while(true)
+                {
+                    watykanczyk.Location = new Point(random.Next()%1000, random.Next()%500);
+                    watykanczyk.ShowDialog();
+                }
+            }
         }
 
         //buttons
