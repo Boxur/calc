@@ -75,9 +75,13 @@ namespace calc
                     num1 = Convert.ToDouble(textBox1.Text);
                     if (num1==0)
                     {
-                       Form2 window = new Form2();
+                        textBox1.Text = "";
+                        label1.Text = "";
+                        num1 = 0;
+                        num2 = 0;
+                        state = state.none;
+                        Form2 window = new Form2();
                         window.ShowDialog();
-                        reset();
                         break;
                     }
                     textBox1.Text = "";
@@ -95,7 +99,7 @@ namespace calc
         {
 
         }
-        private void button19_Click(object sender, EventArgs e)
+        private void buttonC_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
             label1.Text = "";
@@ -104,19 +108,19 @@ namespace calc
             state = state.none;
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void buttonCE_Click(object sender, EventArgs e)
         {
             textBox1.Text = "";
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void buttonBS_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "")
                 return;
             textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length-1);
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void buttonDiv_Click(object sender, EventArgs e)
         {
             operation();
             state = state.divide;
@@ -124,7 +128,7 @@ namespace calc
             label1.Text += "/";
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void buttonMult_Click(object sender, EventArgs e)
         {
             operation();
             state = state.multiply;
@@ -132,7 +136,7 @@ namespace calc
             label1.Text += "*";
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void buttonSub_Click(object sender, EventArgs e)
         {
             operation();
             state = state.substract;
@@ -140,7 +144,7 @@ namespace calc
             label1.Text += "-";
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void buttonAdd_Click(object sender, EventArgs e)
         {
             operation();
             state = state.add;
@@ -148,7 +152,7 @@ namespace calc
             label1.Text += "+";
         }
         
-        private void button12_Click(object sender, EventArgs e)
+        private void buttonEq_Click(object sender, EventArgs e)
         {
             operation();
             state = state.none;
@@ -250,9 +254,5 @@ namespace calc
 
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
     }
 }

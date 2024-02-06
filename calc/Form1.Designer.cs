@@ -146,7 +146,7 @@ namespace calc
             this.buttonC.TabIndex = 19;
             this.buttonC.Text = "C";
             this.buttonC.UseVisualStyleBackColor = false;
-            this.buttonC.Click += new System.EventHandler(this.button19_Click);
+            this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
             // 
             // button1
             // 
@@ -341,7 +341,7 @@ namespace calc
             this.buttonEQ.TabIndex = 12;
             this.buttonEQ.Text = "=";
             this.buttonEQ.UseVisualStyleBackColor = false;
-            this.buttonEQ.Click += new System.EventHandler(this.button12_Click);
+            this.buttonEQ.Click += new System.EventHandler(this.buttonEq_Click);
             // 
             // buttonAdd
             // 
@@ -356,7 +356,7 @@ namespace calc
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = false;
-            this.buttonAdd.Click += new System.EventHandler(this.button13_Click);
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonSub
             // 
@@ -371,7 +371,7 @@ namespace calc
             this.buttonSub.TabIndex = 14;
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = false;
-            this.buttonSub.Click += new System.EventHandler(this.button14_Click);
+            this.buttonSub.Click += new System.EventHandler(this.buttonSub_Click);
             // 
             // buttonMult
             // 
@@ -386,7 +386,7 @@ namespace calc
             this.buttonMult.TabIndex = 15;
             this.buttonMult.Text = "*";
             this.buttonMult.UseVisualStyleBackColor = false;
-            this.buttonMult.Click += new System.EventHandler(this.button15_Click);
+            this.buttonMult.Click += new System.EventHandler(this.buttonMult_Click);
             // 
             // buttonDiv
             // 
@@ -401,7 +401,7 @@ namespace calc
             this.buttonDiv.TabIndex = 16;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = false;
-            this.buttonDiv.Click += new System.EventHandler(this.button16_Click);
+            this.buttonDiv.Click += new System.EventHandler(this.buttonDiv_Click);
             // 
             // buttonBS
             // 
@@ -416,7 +416,7 @@ namespace calc
             this.buttonBS.TabIndex = 17;
             this.buttonBS.Text = "⌫";
             this.buttonBS.UseVisualStyleBackColor = false;
-            this.buttonBS.Click += new System.EventHandler(this.button17_Click);
+            this.buttonBS.Click += new System.EventHandler(this.buttonBS_Click);
             // 
             // buttonCE
             // 
@@ -431,7 +431,7 @@ namespace calc
             this.buttonCE.TabIndex = 18;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = false;
-            this.buttonCE.Click += new System.EventHandler(this.button18_Click);
+            this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
             // 
             // textBox1
             // 
@@ -445,10 +445,6 @@ namespace calc
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // Calculator
             // 
