@@ -55,6 +55,7 @@ namespace calc
             this.buttonBS = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -445,15 +446,23 @@ namespace calc
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(417, 605);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(435, 652);
+            this.MinimumSize = new System.Drawing.Size(435, 652);
             this.Name = "Calculator";
             this.ShowIcon = false;
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -491,6 +500,7 @@ namespace calc
         private System.Windows.Forms.Button buttonDiv;
         private System.Windows.Forms.Button buttonBS;
         private System.Windows.Forms.Button buttonCE;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

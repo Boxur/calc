@@ -73,6 +73,13 @@ namespace calc
                     break;
                 case state.divide:
                     num1 = Convert.ToDouble(textBox1.Text);
+                    if (num1==0)
+                    {
+                       Form2 window = new Form2();
+                        window.ShowDialog();
+                        reset();
+                        break;
+                    }
                     textBox1.Text = "";
                     num2 /= num1;
                     num1 = 0;
@@ -222,12 +229,30 @@ namespace calc
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            int a = textBox1.SelectionStart;
+            for(int i=0;i<textBox1.Text.Length; i++)
+                if (textBox1.Text[i] < '0' || textBox1.Text[i]>'9')
+                {
+                    textBox1.Text = textBox1.Text.Remove(i,1);
+                }
+            if (a == 0)
+                return;
+            textBox1.SelectionStart = a-1;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
         }
     }
 }
